@@ -1,0 +1,74 @@
+// *************************************************************************
+// Elements
+// *************************************************************************
+
+// Allow only some of given elements
+@mixin bootpetite-elements($requested-elements, $other-elements: (), $allowed-elements: $elements) {
+	$list: ();
+	@each $element in $requested-elements {
+		@if index($allowed-elements, $element) != null {
+			$list: append($list, $element, comma);
+		}
+	}
+	@each $element in $other-elements {
+		$list: append($list, $element, comma);
+	}
+
+	@if 0 < length($list) {
+		#{$list} {
+			@content;
+		}
+	}
+}
+
+// If any of gien elements is used
+@mixin bootpetite-if($requested-elements, $allowed-elements: $elements) {
+	$condition: false;
+	@each $element in $requested-elements {
+		@if index($allowed-elements, $element) != null {
+			$condition: true;
+		}
+	}
+
+	@if $condition == true {
+		@content;
+	}
+}
+
+
+// *************************************************************************
+// Inputs
+// *************************************************************************
+
+// Allow only some of given input-types
+@mixin bootpetite-input-types($requested-input-types, $other-input-types: (), $allowed-input-types: $input-types) {
+	$list: ();
+	@each $input-type in $requested-input-types {
+		@if index($allowed-input-types, $input-type) != null {
+			$list: append($list, "input[type=\"#{$input-type}\"]", comma);
+		}
+	}
+	@each $input-type in $other-input-types {
+		$list: append($list, $input-type, comma);
+	}
+
+	@if 0 < length($list) {
+		#{$list} {
+			@content;
+		}
+	}
+}
+
+// If any of gien input is used
+@mixin bootpetite-if-input-type($requested-input-types, $allowed-input-types: $input-types) {
+	$condition: false;
+	@each $input-type in $requested-input-types {
+		@if index($allowed-input-types, $input-type) != null {
+			$condition: true;
+		}
+	}
+
+	@if $condition == true {
+		@content;
+	}
+}

@@ -1,0 +1,133 @@
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container, .container-xl {
+	@include container-fixed;
+
+	@include style-up(sm) {
+		width: $container-sm;
+	}
+	@include style-up(md) {
+		width: $container-md;
+	}
+	@include style-up(lg) {
+		width: $container-lg;
+	}
+}
+
+.container-xl {
+	@include style-up(xl) {
+		width: $container-xl;
+	}
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid, .container-fluid-xl, .container-fluid-xxl {
+	@include container-fixed;
+}
+
+.container-fluid-xl {
+	max-width: $container-xl;
+}
+
+.container-fluid-xxl {
+	max-width: $container-xxl;
+}
+
+//
+// Clearing
+//
+// Float fix
+@each $breakpoint in (xs, sm, md, lg, xl) {
+	@include style-for($breakpoint) {
+		%bootpetite-clear-both-#{$breakpoint} { clear: both; }
+
+		$selector: "col-#{$breakpoint}-clear-6";
+		@if index($grid, $selector) { .#{$selector}:nth-child(2n+1) { @extend %bootpetite-clear-both-#{$breakpoint}; } }
+
+		$selector: "col-#{$breakpoint}-clear-5";
+		@if index($grid, $selector) { .#{$selector}:nth-child(5n+1) { @extend %bootpetite-clear-both-#{$breakpoint}; } }
+
+		$selector: "col-#{$breakpoint}-clear-4";
+		@if index($grid, $selector) { .#{$selector}:nth-child(3n+1) { @extend %bootpetite-clear-both-#{$breakpoint}; } }
+
+		$selector: "col-#{$breakpoint}-clear-3";
+		@if index($grid, $selector) { .#{$selector}:nth-child(4n+1) { @extend %bootpetite-clear-both-#{$breakpoint}; } }
+
+		$selector: "col-#{$breakpoint}-clear-2";
+		@if index($grid, $selector) { .#{$selector}:nth-child(6n+1) { @extend %bootpetite-clear-both-#{$breakpoint}; } }
+	}
+}
+
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+	@include make-row;
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include make-grid-columns;
+
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+@include make-grid(xs);
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-sm-min) {
+	@include make-grid(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+	@include make-grid(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
+	@include make-grid(lg);
+}
+
+
+// Extra large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-xl-min) {
+	@include make-grid(xl);
+}

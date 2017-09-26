@@ -1,0 +1,485 @@
+// // *************************************************************************
+// // Theme
+// // *************************************************************************
+
+// // Body colors
+// $body-bg: #fff !default;
+// $body-color: #212529 !default;
+
+// // Links
+// $link-color:            #007bff !default;
+// $link-decoration:       none !default;
+// $link-hover-color:      darken(#007bff, 15%) !default;
+// $link-hover-decoration: underline !default;
+
+// // Fonts
+// $font-size-base: 16px !default;
+// $font-weight-base: 600 !default;
+// $font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+// $line-height-base: 1.5 !default;
+// $dt-font-weight: 600 !default;
+// $text-muted: #ccc;
+
+// // Table
+// $table-cell-padding: 2rem !default;
+
+// // Typography
+// $paragraph-margin-bottom: 1rem !default;
+
+// *************************************************************************
+// Grid system
+// *************************************************************************
+
+$grid-gutter-width: 40px !default;
+$grid-columns: 12 !default;
+
+$container-sm:      (540px + $grid-gutter-width) !default;
+$container-md:      (720px + $grid-gutter-width) !default;
+$container-lg:      (940px + $grid-gutter-width) !default;
+$container-xl:      (1190px + $grid-gutter-width) !default;
+$container-xxl:      1440px !default;
+// $container-xxl:      1920px !default;
+
+$screen-sm-min:              576px !default;
+$screen-md-min:              768px !default;
+$screen-lg-min:              992px !default;
+$screen-xl-min:             1250px !default;
+
+$grid-breakpoints: (xs: 0, sm: $screen-sm-min, md: $screen-md-min, lg: $screen-lg-min, xl: $screen-xl-min) !default;
+
+
+// *************************************************************************
+// List of used elements
+// *************************************************************************
+
+// Available elements
+$elements:
+
+	//
+	// Headers & typography
+	//
+
+	h1
+	".h1"
+	h2
+	".h2"
+	h3
+	".h3"
+	h4
+	".h4"
+	h5
+	".h5"
+	h6
+	".h6"
+	p
+	b
+	strong
+	code
+	dd
+	dfn
+	dl
+	dt
+	figcaption
+	figure
+	hr
+	img
+	kbd
+	ol
+	pre
+	samp
+	small
+	sub
+	sup
+	ul
+	abbr
+	mark
+
+
+	//
+	// Tables
+	//
+
+	caption
+	table
+	th
+
+
+	//
+	// Active elements
+	//
+
+	a
+
+
+	//
+	// Layout
+	//
+
+	address
+	article
+	aside
+	blockquote
+	dialog
+	footer
+	header
+	hgroup
+	main
+	nav
+	section
+	template
+
+
+	//
+	// Forms
+	//
+
+	area
+	button
+	fieldset
+	input
+	label
+	legend
+	optgroup
+	output
+	select
+	textarea
+	summary
+	progress
+
+!default;
+
+
+// Input types
+$input-types:
+
+	radio
+	checkbox
+	button
+	submit
+	reset
+	search
+	number
+	date
+	time
+	datetime-local
+	month
+
+!default;
+
+// *************************************************************************
+// List of used grid classes
+// *************************************************************************
+
+$grid:
+
+	//
+	// Columns
+	//
+
+	col-xs-1
+	col-xs-2
+	col-xs-3
+	col-xs-4
+	col-xs-5
+	col-xs-6
+	col-xs-7
+	col-xs-8
+	col-xs-9
+	col-xs-10
+	col-xs-11
+	col-xs-12
+
+	col-sm-1
+	col-sm-2
+	col-sm-3
+	col-sm-4
+	col-sm-5
+	col-sm-6
+	col-sm-7
+	col-sm-8
+	col-sm-9
+	col-sm-10
+	col-sm-11
+	col-sm-12
+
+	col-md-1
+	col-md-2
+	col-md-3
+	col-md-4
+	col-md-5
+	col-md-6
+	col-md-7
+	col-md-8
+	col-md-9
+	col-md-10
+	col-md-11
+	col-md-12
+
+	col-lg-1
+	col-lg-2
+	col-lg-3
+	col-lg-4
+	col-lg-5
+	col-lg-6
+	col-lg-7
+	col-lg-8
+	col-lg-9
+	col-lg-10
+	col-lg-11
+	col-lg-12
+
+	col-xl-1
+	col-xl-2
+	col-xl-3
+	col-xl-4
+	col-xl-5
+	col-xl-6
+	col-xl-7
+	col-xl-8
+	col-xl-9
+	col-xl-10
+	col-xl-11
+	col-xl-12
+
+
+
+	//
+	// Offsets
+	//
+
+	col-xs-offset-0
+	col-xs-offset-1
+	col-xs-offset-2
+	col-xs-offset-3
+	col-xs-offset-4
+	col-xs-offset-5
+	col-xs-offset-6
+	col-xs-offset-7
+	col-xs-offset-8
+	col-xs-offset-9
+	col-xs-offset-10
+	col-xs-offset-11
+
+	col-sm-offset-0
+	col-sm-offset-1
+	col-sm-offset-2
+	col-sm-offset-3
+	col-sm-offset-4
+	col-sm-offset-5
+	col-sm-offset-6
+	col-sm-offset-7
+	col-sm-offset-8
+	col-sm-offset-9
+	col-sm-offset-10
+	col-sm-offset-11
+
+	col-md-offset-0
+	col-md-offset-1
+	col-md-offset-2
+	col-md-offset-3
+	col-md-offset-4
+	col-md-offset-5
+	col-md-offset-6
+	col-md-offset-7
+	col-md-offset-8
+	col-md-offset-9
+	col-md-offset-10
+	col-md-offset-11
+
+	col-lg-offset-0
+	col-lg-offset-1
+	col-lg-offset-2
+	col-lg-offset-3
+	col-lg-offset-4
+	col-lg-offset-5
+	col-lg-offset-6
+	col-lg-offset-7
+	col-lg-offset-8
+	col-lg-offset-9
+	col-lg-offset-10
+	col-lg-offset-11
+
+	col-xl-offset-0
+	col-xl-offset-1
+	col-xl-offset-2
+	col-xl-offset-3
+	col-xl-offset-4
+	col-xl-offset-5
+	col-xl-offset-6
+	col-xl-offset-7
+	col-xl-offset-8
+	col-xl-offset-9
+	col-xl-offset-10
+	col-xl-offset-11
+
+
+	//
+	// Pushes
+	//
+
+	col-xs-push-1
+	col-xs-push-2
+	col-xs-push-3
+	col-xs-push-4
+	col-xs-push-5
+	col-xs-push-6
+	col-xs-push-7
+	col-xs-push-8
+	col-xs-push-9
+	col-xs-push-10
+	col-xs-push-11
+	col-xs-push-12
+
+	col-sm-push-1
+	col-sm-push-2
+	col-sm-push-3
+	col-sm-push-4
+	col-sm-push-5
+	col-sm-push-6
+	col-sm-push-7
+	col-sm-push-8
+	col-sm-push-9
+	col-sm-push-10
+	col-sm-push-11
+	col-sm-push-12
+
+	col-md-push-1
+	col-md-push-2
+	col-md-push-3
+	col-md-push-4
+	col-md-push-5
+	col-md-push-6
+	col-md-push-7
+	col-md-push-8
+	col-md-push-9
+	col-md-push-10
+	col-md-push-11
+	col-md-push-12
+
+	col-lg-push-1
+	col-lg-push-2
+	col-lg-push-3
+	col-lg-push-4
+	col-lg-push-5
+	col-lg-push-6
+	col-lg-push-7
+	col-lg-push-8
+	col-lg-push-9
+	col-lg-push-10
+	col-lg-push-11
+	col-lg-push-12
+
+	col-xl-push-1
+	col-xl-push-2
+	col-xl-push-3
+	col-xl-push-4
+	col-xl-push-5
+	col-xl-push-6
+	col-xl-push-7
+	col-xl-push-8
+	col-xl-push-9
+	col-xl-push-10
+	col-xl-push-11
+	col-xl-push-12
+
+
+	//
+	// Pulls
+	//
+
+	col-xs-pull-1
+	col-xs-pull-2
+	col-xs-pull-3
+	col-xs-pull-4
+	col-xs-pull-5
+	col-xs-pull-6
+	col-xs-pull-7
+	col-xs-pull-8
+	col-xs-pull-9
+	col-xs-pull-10
+	col-xs-pull-11
+	col-xs-pull-12
+
+	col-sm-pull-1
+	col-sm-pull-2
+	col-sm-pull-3
+	col-sm-pull-4
+	col-sm-pull-5
+	col-sm-pull-6
+	col-sm-pull-7
+	col-sm-pull-8
+	col-sm-pull-9
+	col-sm-pull-10
+	col-sm-pull-11
+	col-sm-pull-12
+
+	col-md-pull-1
+	col-md-pull-2
+	col-md-pull-3
+	col-md-pull-4
+	col-md-pull-5
+	col-md-pull-6
+	col-md-pull-7
+	col-md-pull-8
+	col-md-pull-9
+	col-md-pull-10
+	col-md-pull-11
+	col-md-pull-12
+
+	col-lg-pull-1
+	col-lg-pull-2
+	col-lg-pull-3
+	col-lg-pull-4
+	col-lg-pull-5
+	col-lg-pull-6
+	col-lg-pull-7
+	col-lg-pull-8
+	col-lg-pull-9
+	col-lg-pull-10
+	col-lg-pull-11
+	col-lg-pull-12
+
+	col-xl-pull-1
+	col-xl-pull-2
+	col-xl-pull-3
+	col-xl-pull-4
+	col-xl-pull-5
+	col-xl-pull-6
+	col-xl-pull-7
+	col-xl-pull-8
+	col-xl-pull-9
+	col-xl-pull-10
+	col-xl-pull-11
+	col-xl-pull-12
+
+
+	//
+	// Clearing
+	//
+	col-xs-clear-2
+	col-xs-clear-3
+	col-xs-clear-4
+	col-xs-clear-5
+	col-xs-clear-6
+	col-sm-clear-2
+	col-sm-clear-3
+	col-sm-clear-4
+	col-sm-clear-5
+	col-sm-clear-6
+	col-md-clear-2
+	col-md-clear-3
+	col-md-clear-4
+	col-md-clear-5
+	col-md-clear-6
+	col-lg-clear-2
+	col-lg-clear-3
+	col-lg-clear-4
+	col-lg-clear-5
+	col-lg-clear-6
+	col-xl-clear-2
+	col-xl-clear-3
+	col-xl-clear-4
+	col-xl-clear-5
+	col-xl-clear-6
+
+!default;
