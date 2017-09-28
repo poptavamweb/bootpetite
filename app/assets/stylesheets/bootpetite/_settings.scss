@@ -31,6 +31,8 @@
 // *************************************************************************
 
 $grid-gutter-width: 40px !default;
+$grid-gutter-width-small: 20px !default;
+$grid-gutter-width-zero: 0px !default;
 $grid-columns: 12 !default;
 
 $container-sm:      (540px + $grid-gutter-width) !default;

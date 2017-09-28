@@ -19,6 +19,8 @@
 	@include style-up(lg) {
 		width: $container-lg;
 	}
+
+	&.no-gutter { padding-left:  floor(($grid-gutter-width-zero / 2)); padding-right: ceil(($grid-gutter-width-zero / 2)); }
 }
 
 .container-xl {
@@ -35,6 +37,8 @@
 
 .container-fluid, .container-fluid-xl, .container-fluid-xxl {
 	@include container-fixed;
+
+	&.no-gutter { padding-left:  floor(($grid-gutter-width-zero / 2)); padding-right: ceil(($grid-gutter-width-zero / 2)); }
 }
 
 .container-fluid-xl {
@@ -78,6 +82,20 @@
 
 .row {
 	@include make-row;
+
+	&.no-gutter {
+		margin-left:  ceil(($grid-gutter-width-zero / -2));
+		margin-right: floor(($grid-gutter-width-zero / -2));
+
+		> [class^="col-"] {   padding-left:  floor(($grid-gutter-width-zero / 2)); padding-right: ceil(($grid-gutter-width-zero / 2)); }
+	}
+
+	&.small-gutter {
+		margin-left:  ceil(($grid-gutter-width-small / -2));
+		margin-right: floor(($grid-gutter-width-small / -2));
+
+		> [class^="col-"] {   padding-left:  floor(($grid-gutter-width-small / 2)); padding-right: ceil(($grid-gutter-width-small / 2)); }
+	}
 }
 
 
