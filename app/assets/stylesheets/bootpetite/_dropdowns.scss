@@ -39,7 +39,7 @@
   padding: 5px 0;
   margin: 2px 0 0; // override default ul
   list-style: none;
-  font-size: $font-size-base;
+  font-size: rem($font-size-base);
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   background-color: $dropdown-bg;
   border: 1px solid $dropdown-fallback-border; // IE8 fallback
@@ -153,7 +153,7 @@
 .dropdown-header {
   display: block;
   padding: 3px 20px;
-  font-size: $font-size-small;
+  font-size: rem($font-size-small);
   line-height: $line-height-base;
   color: $dropdown-header-color;
   white-space: nowrap; // as with > li > a

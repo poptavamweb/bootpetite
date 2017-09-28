@@ -97,7 +97,7 @@
   bottom: 0;
   width: $carousel-control-width;
   @include opacity($carousel-control-opacity);
-  font-size: $carousel-control-font-size;
+  font-size: rem($carousel-control-font-size);
   color: $carousel-control-color;
   text-align: center;
   text-shadow: $carousel-text-shadow;
@@ -244,7 +244,7 @@
       width: ($carousel-control-font-size * 1.5);
       height: ($carousel-control-font-size * 1.5);
       margin-top: ($carousel-control-font-size / -2);
-      font-size: ($carousel-control-font-size * 1.5);
+      font-size: rem(($carousel-control-font-size * 1.5));
     }
     .glyphicon-chevron-left,
     .icon-prev {

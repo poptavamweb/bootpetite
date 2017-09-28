@@ -36,12 +36,12 @@
 	}
 }
 
-@include bootpetite-elements(h1 ".h1") { font-size: $font-size-h1; }
-@include bootpetite-elements(h2 ".h2") { font-size: $font-size-h2; }
-@include bootpetite-elements(h3 ".h3") { font-size: $font-size-h3; }
-@include bootpetite-elements(h4 ".h4") { font-size: $font-size-h4; }
-@include bootpetite-elements(h5 ".h5") { font-size: $font-size-h5; }
-@include bootpetite-elements(h6 ".h6") { font-size: $font-size-h6; }
+@include bootpetite-elements(h1 ".h1") { font-size: rem($font-size-h1); }
+@include bootpetite-elements(h2 ".h2") { font-size: rem($font-size-h2); }
+@include bootpetite-elements(h3 ".h3") { font-size: rem($font-size-h3); }
+@include bootpetite-elements(h4 ".h4") { font-size: rem($font-size-h4); }
+@include bootpetite-elements(h5 ".h5") { font-size: rem($font-size-h5); }
+@include bootpetite-elements(h6 ".h6") { font-size: rem($font-size-h6); }
 
 
 // Body text
@@ -53,12 +53,12 @@
 
 @include bootpetite-elements(".lead") {
 	margin-bottom: $line-height-computed;
-	font-size: floor(($font-size-base * 1.15));
+	font-size: rem(floor(($font-size-base * 1.15)));
 	font-weight: 300;
 	line-height: 1.4;
 
 	@media (min-width: $screen-sm-min) {
-		font-size: ($font-size-base * 1.5);
+		font-size: rem(($font-size-base * 1.5));
 	}
 }
 
@@ -68,7 +68,7 @@
 
 // Ex: (12px small font / 14px base font) * 100% = about 85%
 @include bootpetite-elements(small ".small") {
-	font-size: floor((100% * $font-size-small / $font-size-base));
+	font-size: rem(floor((100% * $font-size-small / $font-size-base)));
 }
 
 @include bootpetite-elements(mark ".mark") {
@@ -222,7 +222,7 @@
 @include bootpetite-elements(blockquote) {
 	padding: ($line-height-computed / 2) $line-height-computed;
 	margin: 0 0 $line-height-computed;
-	font-size: $blockquote-font-size;
+	font-size: rem($blockquote-font-size);
 	border-left: 5px solid $blockquote-border-color;
 
 	p,

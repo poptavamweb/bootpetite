@@ -5,7 +5,7 @@
     > a,
     > span {
       padding: $padding-vertical $padding-horizontal;
-      font-size: $font-size;
+      font-size: rem($font-size);
       line-height: $line-height;
     }
     &:first-child {
