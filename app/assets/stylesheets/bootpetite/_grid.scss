@@ -96,6 +96,14 @@
 
 		> [class^="col-"] {   padding-left:  floor(($grid-gutter-width-small / 2)); padding-right: ceil(($grid-gutter-width-small / 2)); }
 	}
+
+	&.bottom-gutter {
+		> [class^="col-"] { margin-bottom: $grid-gutter-width; }
+	}
+
+	&.bottom-half-gutter {
+		> [class^="col-"] { margin-bottom: ($grid-gutter-width / 2); }
+	}
 }
 
 

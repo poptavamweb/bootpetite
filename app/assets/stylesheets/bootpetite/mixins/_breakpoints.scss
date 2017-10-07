@@ -78,8 +78,8 @@
 // Media that spans multiple breakpoint widths.
 // Makes the @content apply between the min and max breakpoints
 @mixin style-between($lower, $upper, $breakpoints: $grid-breakpoints) {
-	$min: breakpoint-min($lower, $breakpoints);
-	$max: breakpoint-max($upper, $breakpoints);
+	$min: if(type-of($lower) == 'number', $lower, breakpoint-min($lower, $breakpoints));
+	$max: if(type-of($upper) == 'number', $upper, breakpoint-max($upper, $breakpoints));
 
 	@media (min-width: $min) and (max-width: $max) {
 		@content;

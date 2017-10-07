@@ -214,7 +214,7 @@
 	}
 	.initialism {
 		font-size: 90%;
-		@extend .text-uppercase;
+		text-transform: uppercase;
 	}
 }
 
